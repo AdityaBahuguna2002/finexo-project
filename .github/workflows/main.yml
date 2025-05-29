@@ -1,9 +1,10 @@
-name: finexo-project 
+name: Finexo-project
 
 on:
-  push:  
+  push:
     branches:
       - main
+
 permissions:
   contents: read
   pages: write
@@ -19,11 +20,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload site
+      - name: Upload site content
         uses: actions/upload-pages-artifact@v2
         with:
-          path: './finexo-html'  # Or './public' if your files are in a subfolder
+          path: './finexo-html'  # change this to './public' if your files are in a 'public' folder
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
-  
